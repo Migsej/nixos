@@ -1,14 +1,30 @@
 { pkgs, ... }:
 
+
+let school = with pkgs; [
+    kicad
+    obsidian
+    libreoffice
+  ];
+in
 {
   home-manager.users.migsej = {pkgs, ... }: {
     imports = [ ./kakoune.nix ];
     nixpkgs.config.allowUnfree = true;
-    home.packages = with pkgs; [
-      discord
-      obsidian
-      libreoffice
-    ];
+    home.packages = let
+    	pythonEnv = pkgs.python312.withPackages (p: with p; [
+      	pycryptodome
+    	]);
+    	in with pkgs; [
+        discord
+        exiftool
+        bintools
+        exiftool
+        p7zip
+        file
+        unzip
+        pythonEnv
+      ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;
 

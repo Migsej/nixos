@@ -17,7 +17,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  virtualisation.docker.enable = true;
+
   networking.hostName = "nixos"; # Define your hostname.
+
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -99,7 +102,7 @@
   users.users.migsej = {
     isNormalUser = true;
     description = "Migsej";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" ];
   };
   
 
@@ -108,7 +111,6 @@
 
   environment.systemPackages = with pkgs; [
     xclip
-    python3
     git
     google-chrome
     alacritty
