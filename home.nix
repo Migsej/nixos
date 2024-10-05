@@ -14,6 +14,7 @@ in
     home.packages = let
     	pythonEnv = pkgs.python312.withPackages (p: with p; [
       	pycryptodome
+      	ipython
     	]);
     	in with pkgs; [
         discord

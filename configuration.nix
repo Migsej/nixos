@@ -64,6 +64,7 @@
       i3blocks
       flameshot
       networkmanagerapplet
+      pulseaudio
   ];
   
 
