@@ -26,6 +26,7 @@ in
         unzip
         pythonEnv
         feh
+        ghidra
       ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;
