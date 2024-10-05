@@ -25,6 +25,7 @@ in
         file
         unzip
         pythonEnv
+        feh
       ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;

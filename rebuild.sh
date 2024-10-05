@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 sudo nixos-rebuild switch
-git add .
-git commit -m "$(date)"
-git push -u origin main
+git -C ~/nixos add .
+git -C ~/nixos commit -m "$(date)"
+git -C ~/nixos push -u origin main
