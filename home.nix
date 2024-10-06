@@ -27,6 +27,7 @@ in
         pythonEnv
         feh
         ghidra
+        binwalk
       ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;
