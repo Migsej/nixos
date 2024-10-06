@@ -1,12 +1,6 @@
 { pkgs, ... }:
 
 
-let school = with pkgs; [
-    kicad
-    obsidian
-    libreoffice
-  ];
-in
 {
   home-manager.users.migsej = {pkgs, ... }: {
     imports = [ ./kakoune.nix ];
@@ -16,6 +10,11 @@ in
       	pycryptodome
       	ipython
     	]);
+    	school = with pkgs; [
+        kicad
+        obsidian
+        libreoffice
+      ];
     	in with pkgs; [
         discord
         exiftool
