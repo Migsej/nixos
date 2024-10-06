@@ -40,6 +40,14 @@
         columns = 0;
         lines = 10;
       };
+      hooks = [
+        {
+          name = "InsertChar";
+          option = "\\t";
+          once = false;
+          commands = "exec -draft -itersel h@";
+        }
+      ];
       keyMappings = [
         {
           docstring = "yank the selection into the clipboard";
