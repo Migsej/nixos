@@ -27,6 +27,7 @@
         feh
         ghidra
         binwalk
+        niv
       ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;
