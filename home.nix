@@ -13,7 +13,7 @@
       tex = (pkgs.texlive.combine {
         inherit (pkgs.texlive) scheme-basic
         #dvisvgm dvipng # for preview and export as html
-        bibtex wrapfig amsmath ulem hyperref capt-of;
+        etoolbox bibtex wrapfig amsmath ulem hyperref capt-of;
         #(setq org-latex-compiler "lualatex")
         #(setq org-preview-latex-default-process 'dvisvgm)
       });
