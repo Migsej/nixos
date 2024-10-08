@@ -23,7 +23,7 @@
     	in with pkgs; [
         #callPackage ./ctf-env.nix {}
         (import ./ctf-env.nix { inherit pkgs; })
-        (import ./ns.nix { inherit pkgs; })
+        (import ./ns/ns.nix { inherit pkgs; })
         discord
         exiftool
         bintools

@@ -1,10 +1,10 @@
 { pkgs }:
 pkgs.stdenv.mkDerivation {
   name = "ns";
-  src = ./ns.sh;
+  src = ./.;
   phases = [ "installPhase" ];
   installPhase = ''
     mkdir -p $out/bin
-    cp $src $out/bin
+    cp $src/ns.sh $out/bin
   '';
 }
