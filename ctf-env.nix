@@ -7,7 +7,7 @@ let
   inner = pkgs.writeScript "ctf-env-inner" ''
     #!${pkgs.bash}/bin/bash
 
-    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS ctf-env "
+    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS ctf-env"
     set -eu -o pipefail
 
     if [ $# -ne 0 ]; then
