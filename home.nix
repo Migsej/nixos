@@ -18,12 +18,15 @@
         tetex
       ];
     	in with pkgs; [
+        #callPackage ./ctf-env.nix {}
+        (import ./ctf-env.nix { inherit pkgs; })
         discord
         exiftool
         bintools
         exiftool
         p7zip
         file
+        wget
         unzip
         pythonEnv
         feh
