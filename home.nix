@@ -5,6 +5,9 @@
   home-manager.users.migsej = {pkgs, ... }: {
     imports = [ ./kakoune.nix ];
     nixpkgs.config.allowUnfree = true;
+    home.sessionVariables = {
+      NIX_SHELL_PRESERVE_PROMPT=1;
+    };
     home.packages = let
     	pythonEnv = pkgs.python312.withPackages (p: with p; [
       	pycryptodome
@@ -34,7 +37,12 @@
         binwalk
         clang
       ] ++ school;
-    programs.bash.enable = true;
+    programs.bash = {
+      enable = true;
+      bashrcExtra = ''
+        export PS1="\n\[\033[1;32m\][\[\e]0;\u@\h: \w\a\]\u@\h:\w $NIX_SHELL_DESCRIPTIONS]\$\[\033[0m\]"
+      '';
+    };
     programs.home-manager.enable = true;
 
     programs.git = {
