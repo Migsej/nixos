@@ -29,6 +29,7 @@
         feh
         ghidra
         binwalk
+        clang
       ] ++ school;
     programs.bash.enable = true;
     programs.home-manager.enable = true;

@@ -50,6 +50,12 @@
       ];
       keyMappings = [
         {
+          docstring = "compiler latex";
+          mode = "user";
+          key = "t";
+          effect = ":w<ret>!pdflatex *.tex<ret>u";
+        }
+        {
           docstring = "yank the selection into the clipboard";
           mode = "user";
           key = "y";
