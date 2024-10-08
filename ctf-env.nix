@@ -33,7 +33,6 @@ pkgs.buildFHSUserEnv {
       ropgadget
       socat
       strace
-      vim
     ];
   multiPkgs =
     pkgs:

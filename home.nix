@@ -9,9 +9,10 @@
       NIX_SHELL_PRESERVE_PROMPT=1;
     };
     home.packages = let
-    	pythonEnv = pkgs.python312.withPackages (p: with p; [
+    	pythonEnv = pkgs.python3.withPackages (p: with p; [
       	pycryptodome
       	ipython
+      	angr
     	]);
     	school = with pkgs; [
         kicad
