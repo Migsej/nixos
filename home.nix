@@ -2,6 +2,7 @@
 
 
 {
+  home-manager.extraSpecialArgs = { inherit pkgs;};
   home-manager.users.migsej = {pkgs, ... }: {
     imports = [ ./kakoune.nix ];
     nixpkgs.config.allowUnfree = true;
@@ -12,7 +13,8 @@
     	pythonEnv = pkgs.python3.withPackages (p: with p; [
       	pycryptodome
       	ipython
-      	angr
+      	# angr
+      	setuptools
     	]);
     	school = with pkgs; [
         kicad
