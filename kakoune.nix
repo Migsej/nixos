@@ -7,7 +7,6 @@
     plugins = with pkgs; [
       kakounePlugins.kakoune-lsp
       rust-analyzer
-      rocmPackages_5.llvm.clang-tools-extra
       texlab
     ];
     extraConfig = ''
