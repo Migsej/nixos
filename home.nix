@@ -22,12 +22,11 @@
         tetex
       ];
     	in with pkgs; [
-        #callPackage ./ctf-env.nix {}
-        (import ./ctf-env.nix { inherit pkgs; })
-        (import ./ns/ns.nix { inherit pkgs; })
+        (callPackage ./ctf-env.nix {})
+        (callPackage ./ns/ns.nix {})
         discord
         exiftool
-        bintools
+        # bintools
         exiftool
         p7zip
         file
@@ -37,7 +36,7 @@
         feh
         ghidra
         binwalk
-        clang
+        gcc
       ] ++ school;
     programs.bash = {
       enable = true;
