@@ -10,5 +10,9 @@ for arg in "$@"; do
   fi
 done
 
+if [ -z "$combined" ]; then
+  combined="shell.nix"
+fi
+
 export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS $combined"
 nix-shell -p $@
