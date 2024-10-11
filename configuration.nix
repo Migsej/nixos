@@ -18,8 +18,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   virtualisation.docker.enable = true;
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "migsej" ];
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -117,6 +117,7 @@
     git
     google-chrome
     alacritty
+    virtualbox
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
