@@ -13,7 +13,7 @@
     	pythonEnv = pkgs.python3.withPackages (p: with p; [
       	pycryptodome
       	ipython
-      	# angr
+      	angr
       	setuptools
     	]);
     	school = with pkgs; [
@@ -23,12 +23,12 @@
         zathura
         tetex
       ];
+      unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
     	in with pkgs; [
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
         discord
         exiftool
-        # bintools
         exiftool
         p7zip
         file
@@ -36,9 +36,10 @@
         unzip
         pythonEnv
         feh
-        ghidra
+        unstable.ghidra
         binwalk
         gcc
+        wordlists
       ] ++ school;
     programs.bash = {
       enable = true;
