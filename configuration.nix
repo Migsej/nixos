@@ -20,10 +20,21 @@
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
   #virtualisation.virtualbox.host.enable = true;
-  #users.extraGroups.vboxusers.members = [ "migsej" ];
+  users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
+  networking.extraHosts = ''
+  77.28.251.54 danwind.hkn
+
+77.28.251.57 bitcrypt.hkn
+
+77.28.251.57 linkedin.hkn
+
+77.28.251.57 facebook.hkn
+
+77.28.251.57 email.hkn
+  '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -118,7 +129,7 @@
     git
     google-chrome
     alacritty
-    virtualbox
+    wireguard-tools
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

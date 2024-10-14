@@ -28,6 +28,7 @@
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
         discord
+        openvpn
         exiftool
         exiftool
         p7zip
