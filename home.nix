@@ -41,6 +41,7 @@
         binwalk
         gcc
         wordlists
+        prismlauncher
       ] ++ school;
     programs.bash = {
       enable = true;
