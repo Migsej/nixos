@@ -12,9 +12,9 @@
     home.packages = let
     	pythonEnv = pkgs.python3.withPackages (p: with p; [
       	pycryptodome
+      	pwntools
       	ipython
       	angr
-      	setuptools
     	]);
     	school = with pkgs; [
         kicad
@@ -42,6 +42,7 @@
         gcc
         wordlists
         prismlauncher
+        pwndbg
       ] ++ school;
     programs.bash = {
       enable = true;
