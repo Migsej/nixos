@@ -10,6 +10,14 @@
       texlab
     ];
     extraConfig = ''
+      hook global InsertChar k %{ try %{
+        exec -draft hH <a-k>jk<ret> d
+        exec <esc>
+      }}
+      hook global NormalKey y|d|c %{ nop %sh{
+        printf %s "$kak_main_reg_dquote" | xclip -in -selection clipboard >&- 2>&-
+      }}
+      
       map global user l %{:enter-user-mode lsp<ret>} -docstring "LSP mode"
       map global insert <tab> '<a-;>:try lsp-snippets-select-next-placeholders catch %{ execute-keys -with-hooks <lt>tab> }<ret>' -docstring 'Select next snippet placeholder'
 
@@ -55,16 +63,22 @@
           effect = ":w<ret>!pdflatex *.tex<ret>u";
         }
         {
-          docstring = "yank the selection into the clipboard";
+          docstring = "go to grep match";
           mode = "user";
-          key = "y";
-          effect = "<a-|> xclip -selection clipboard<ret>";
+          key = "g";
+          effect = ":grep-jump<ret>";
         }
         {
-          docstring = "paste from the clipboard";
-          mode = "user";
-          key = "p";
-          effect = "!xclip -selection clipboard -o<ret>";
+         docstring = "yank the selection into the clipboard";
+         mode = "user";
+         key = "y";
+         effect = "<a-|> xclip -selection clipboard<ret>";
+        }
+        {
+         docstring = "paste from the clipboard";
+         mode = "user";
+         key = "p";
+         effect = "!xclip -selection clipboard -o<ret>";
         }
       ];
     };

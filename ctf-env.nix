@@ -33,6 +33,7 @@ pkgs.buildFHSUserEnv {
       ropgadget
       socat
       strace
+      tmux
     ];
   multiPkgs =
     pkgs:

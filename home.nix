@@ -42,6 +42,13 @@
         gcc
         wordlists
         prismlauncher
+        (st.overrideAttrs (oldAttrs: rec {
+          configFile = writeText "config.def.h" (builtins.readFile ./dotfiles/st/config.def.h);
+          prePatch = "${oldAttrs.postPatch}\n cp ${configFile} config.def.h";
+          patches = [
+            ./dotfiles/st/st-colorschemes-0.8.5.diff
+          ];
+        }))
         pwndbg
       ] ++ school;
     programs.bash = {
