@@ -32,8 +32,8 @@
         discord
         openvpn
         exiftool
-        exiftool
         p7zip
+        busybox
         file
         wget
         unzip

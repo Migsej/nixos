@@ -129,7 +129,6 @@
     xclip
     git
     google-chrome
-    alacritty
     wireguard-tools
   ];
 
