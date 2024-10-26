@@ -15,6 +15,7 @@
       	pwntools
       	ipython
       	angr
+
     	]);
     	school = with pkgs; [
         kicad
@@ -27,6 +28,7 @@
     	in with pkgs; [
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
+        (callPackage ./dotfiles/st/st.nix {})
         discord
         openvpn
         exiftool
