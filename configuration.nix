@@ -66,7 +66,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
   services.displayManager.defaultSession = "none+i3";
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.windowManager.i3.enable = true;
@@ -79,6 +78,8 @@
       flameshot
       networkmanagerapplet
       pulseaudio
+      libnotify
+      dunst
   ];
   
 
