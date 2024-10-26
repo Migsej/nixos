@@ -37,7 +37,7 @@
         wget
         unzip
         pythonEnv
-        feh
+        sxiv
         unstable.ghidra
         binwalk
         gcc
