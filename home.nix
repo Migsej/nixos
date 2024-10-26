@@ -28,6 +28,7 @@
     	in with pkgs; [
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
+        (callPackage ./st/st.nix {})
         discord
         openvpn
         exiftool
