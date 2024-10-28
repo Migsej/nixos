@@ -43,6 +43,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+default_border pixel 0
+
+default_floating_border pixel 0
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -52,6 +56,8 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec st
+
+bindsym --release $mod+Shift+s exec slock
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -110,6 +116,11 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
+gaps inner 5
+gaps outer 2
+for_window [class="^.*"] border pixel 3
+
 
 # focus the child container
 #bindsym $mod+d focus child

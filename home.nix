@@ -4,6 +4,12 @@
 {
   home-manager.extraSpecialArgs = { inherit pkgs;};
   home-manager.users.migsej = {pkgs, ... }: {
+  home.pointerCursor = {
+        package = pkgs.gnome.adwaita-icon-theme;
+        name = "Adwaita";
+        size = 24;
+        x11.enable = true;
+    };
     imports = [ ./kakoune.nix ];
     nixpkgs.config.allowUnfree = true;
     home.sessionVariables = {
@@ -14,8 +20,8 @@
       	pycryptodome
       	pwntools
       	ipython
+      	tqdm
       	angr
-
     	]);
     	school = with pkgs; [
         kicad
@@ -33,8 +39,8 @@
         openvpn
         exiftool
         p7zip
-        busybox
         file
+        unixtools.xxd
         wget
         unzip
         pythonEnv

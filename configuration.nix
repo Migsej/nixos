@@ -12,6 +12,8 @@
       <home-manager/nixos>
       ./home.nix
     ];
+  nix.settings.experimental-features = "nix-command";
+  programs.slock.enable = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
