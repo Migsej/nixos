@@ -13,6 +13,7 @@
       ./home.nix
     ];
   nix.settings.experimental-features = "nix-command";
+  systemd.coredump.enable = true;
   programs.slock.enable = true;
 
   # Bootloader.

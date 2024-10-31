@@ -22,6 +22,7 @@
       	ipython
       	tqdm
       	angr
+      	gmpy2
     	]);
     	school = with pkgs; [
         kicad
