@@ -22,6 +22,7 @@
       	ipython
       	tqdm
       	angr
+      	matplotlib
       	gmpy2
     	]);
     	school = with pkgs; [

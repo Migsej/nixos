@@ -59,6 +59,8 @@ bindsym $mod+Return exec st
 
 bindsym --release $mod+Shift+s exec slock
 
+bindsym $mod+t exec flameshot gui
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -116,6 +118,7 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
+
 
 gaps inner 5
 gaps outer 2
