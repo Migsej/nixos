@@ -42,6 +42,7 @@
         exiftool
         p7zip
         file
+        nmap
         unixtools.xxd
         wget
         unzip

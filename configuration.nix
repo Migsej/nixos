@@ -37,6 +37,8 @@
 77.28.251.57 facebook.hkn
 
 77.28.251.57 email.hkn
+
+10.10.11.25 greenhorn.htb
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

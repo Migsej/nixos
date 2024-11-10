@@ -59,7 +59,7 @@ bindsym $mod+Return exec st
 
 bindsym --release $mod+Shift+s exec slock
 
-bindsym --release $mod+t exec flameshot gui
+bindsym $mod+Shift+t exec flameshot gui
 
 # kill focused window
 bindsym $mod+Shift+q kill
