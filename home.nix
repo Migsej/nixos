@@ -45,6 +45,7 @@
         nmap
         unixtools.xxd
         wget
+        netcat-gnu
         unzip
         pythonEnv
         sxiv
