@@ -8,6 +8,7 @@
       kakounePlugins.kakoune-lsp
       rust-analyzer
       texlab
+      universal-ctags
     ];
     extraConfig = ''
       hook global InsertChar k %{ try %{

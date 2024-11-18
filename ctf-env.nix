@@ -57,6 +57,7 @@ pkgs.buildFHSUserEnv {
       SDL
       gtk3
       gtk3-x11
+      libGL
       zlib
       libpng12
       SDL2

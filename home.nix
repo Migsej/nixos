@@ -23,7 +23,7 @@
       	tqdm
       	angr
       	matplotlib
-      	gmpy2
+      	pgpy
     	]);
     	school = with pkgs; [
         kicad
@@ -55,6 +55,7 @@
         wordlists
         prismlauncher
         pwndbg
+        arduino
       ] ++ school;
     programs.bash = {
       enable = true;

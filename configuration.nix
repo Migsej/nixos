@@ -12,6 +12,10 @@
       <home-manager/nixos>
       ./home.nix
     ];
+
+  hardware.opengl.extraPackages = [ pkgs.intel-compute-runtime ];
+
+
   nix.settings.experimental-features = "nix-command";
   systemd.coredump.enable = true;
   programs.slock.enable = true;
@@ -39,6 +43,9 @@
 77.28.251.57 email.hkn
 
 10.10.11.25 greenhorn.htb
+77.175.161.45 modicept.hkn
+
+
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -135,6 +142,7 @@
     git
     google-chrome
     wireguard-tools
+    hashcat
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
