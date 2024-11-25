@@ -1,0 +1,633 @@
+$(OBJ)
+-1000,7 +1068,8
+-1017,162 +1086,261
+-1055,13 +1065,53
+-1060,6 +1060,11
+-1071,17 +1121,28
+-1091,7 +1152,8
+-1120,7 +1182,7
+-115,6 +119,9
+-118,10 +137,11
+-1182,7 +1350,7
+-1246,115 +1414,126
+-1285,14 +1347,14
+-1528,7 +1707,7
+-1589,26 +1768,20
+-1659,7 +1832,7
+-1730,11 +1792,11
+-1757,19 +1930,29
+-176,6 +176,8
+-176,8 +176,8
+-1778,25 +1961,25
+-179,26 +199,37
+-1810,9 +1993,11
+-1838,9 +2023,9
+-185,8 +192,8
+-201,6 +201,8
+-212,7 +243,10
+-2138,16 +2323,8
+-22,17 +22,19
+-2306,7 +2368,7
+-2319,7 +2381,7
+-2368,7 +2545,7
+-2381,7 +2558,7
+-2525,7 +2702,9
+-2542,7 +2604,7
+-2565,6 +2744,7
+-2579,6 +2641,14
+-2601,94 +2781,285
+-2637,7 +2707,7
+-2658,8 +2728,9
+-2728,9 +3099,8
+-34,6 +34,7
+-35,6 +35,7
+-36,6 +36,7
+-409,10 +416,10
+-412,17 +446,46
+-42,6 +43,9
+-43,9 +44,21
+-455,6 +456,7
+-462,10 +525,11
+-474,54 +538,62
+-521,7 +528,7
+-536,14 +543,14
+-536,7 +608,7
+-547,13 +619,13
+-564,14 +571,14
+-568,20 +640,16
+-57,6 +70,12
+-592,39 +660,34
+-602,13 +609,13
+-636,10 +699,10
+-648,9 +711,15
+-81,6 +81,8
+-844,6 +851,9
+-851,9 +920,8
+-89,6 +89,7
+-90,6 +92,7
+-990,7 +1058,7
+.c.o
+ARGBEGIN
+ARGC
+ARGEND
+ARGF
+ARG_H__
+ATTRCMP
+ATTR_BLINK
+ATTR_BOLD
+ATTR_BOLD_FAINT
+ATTR_FAINT
+ATTR_INVISIBLE
+ATTR_ITALIC
+ATTR_NULL
+ATTR_REVERSE
+ATTR_SELECTED
+ATTR_SET
+ATTR_STRUCK
+ATTR_UNDERLINE
+ATTR_WDUMMY
+ATTR_WIDE
+ATTR_WRAP
+AUTHORS
+Arg
+BETWEEN
+BUGS
+CSIEscape
+CS_FIN
+CS_GER
+CS_GRAPHIC0
+CS_GRAPHIC1
+CS_MULTI
+CS_UK
+CS_USA
+CURSOR_DEFAULT
+CURSOR_LOAD
+CURSOR_ORIGIN
+CURSOR_SAVE
+CURSOR_WRAPNEXT
+CUSTOMIZATION
+Color
+DC
+DEFAULT
+DESCRIPTION
+DIVCEIL
+Draw
+EARGF
+ESC_ALTCHARSET
+ESC_ARG_SIZ
+ESC_BUF_SIZ
+ESC_CSI
+ESC_START
+ESC_STR
+ESC_STR_END
+ESC_TEST
+ESC_UTF8
+FRC_BOLD
+FRC_ITALIC
+FRC_ITALICBOLD
+FRC_NORMAL
+Font
+Fontcache
+Glyph
+GlyphFontSpec
+HISTSIZE
+INCS
+ISCONTROL
+ISCONTROLC0
+ISCONTROLC1
+ISDELIM
+IS_SET
+IS_TRUECOL
+Key
+LEN
+LIBS
+LICENSE
+LIMIT
+Line
+MANPREFIX
+MAX
+MIN
+MODBIT
+MODE_8BIT
+MODE_ALTSCREEN
+MODE_APPCURSOR
+MODE_APPKEYPAD
+MODE_BLINK
+MODE_BRCKTPASTE
+MODE_CRLF
+MODE_ECHO
+MODE_FBLINK
+MODE_FOCUS
+MODE_FOCUSED
+MODE_HIDE
+MODE_INSERT
+MODE_KBDLOCK
+MODE_MOUSE
+MODE_MOUSEBTN
+MODE_MOUSEMANY
+MODE_MOUSEMOTION
+MODE_MOUSESGR
+MODE_MOUSEX10
+MODE_NUMLOCK
+MODE_PRINT
+MODE_REVERSE
+MODE_UTF8
+MODE_VISIBLE
+MODE_WRAP
+MODKEY
+MouseShortcut
+NAME
+OBJ
+OPTIONS
+PKG_CONFIG
+PREFIX
+RESIZEBUFFER
+Rune
+SCROLL_NOSAVEHIST
+SCROLL_RESIZE
+SCROLL_SAVEHIST
+SEE ALSO
+SEL_EMPTY
+SEL_IDLE
+SEL_READY
+SEL_RECTANGULAR
+SEL_REGULAR
+SHORTCUTS
+SNAP_LINE
+SNAP_WORD
+SRC
+ST
+STCFLAGS
+STCPPFLAGS
+STLDFLAGS
+STREscape
+STR_ARG_SIZ
+STR_BUF_SIZ
+SYNOPSIS
+Selection
+Shortcut
+TCursor
+TERMMOD
+TIMEDIFF
+TLINE
+TLINEABS
+TRUEBLUE
+TRUECOLOR
+TRUEGREEN
+TRUERED
+Term
+TermWindow
+UPDATEWRAPNEXT
+UTF_INVALID
+UTF_SIZ
+VERSION
+X11INC
+X11LIB
+XEMBED_FOCUS_IN
+XEMBED_FOCUS_OUT
+XK_ANY_MOD
+XK_NO_MOD
+XK_SWITCH_MOD
+XSelection
+XWindow
+__anon0b88b7ae0108
+__anon0b88b7ae0208
+__anon0b88b7ae0308
+__anon0b88b7ae0408
+__anon0b88b7ae0508
+__anon0b88b7ae0608
+__anon0b88b7ae0708
+__anon0b88b7ae0808
+__anon0b88b7ae0908
+__anon0b88b7ae0a03
+__anon0b88b7ae0b08
+__anon7c9e12dd0108
+__anon7c9e12dd0208
+__anon7c9e12dd0308
+__anon7c9e12dd0408
+__anon7c9e12dd0508
+__anon7c9e12dd0608
+__anon7c9e12dd0708
+__anon7c9e12e20108
+__anon7c9e12e2020a
+a/config.def.h
+a/st.c
+a/st.h
+a/x.c
+all
+allowaltscreen
+allowwindowops
+alt
+altscrn
+appcursor
+appkey
+arg
+args
+argv0
+ascent
+ascii_printable
+attr
+attrs
+badslant
+badweight
+base64dec
+base64dec_getc
+bellvolume
+bfont
+bg
+blinktimeout
+bmotion
+borderpx
+bot
+bpress
+brelease
+buf
+button
+buttonmask
+buttons
+c
+ch
+charset
+chscale
+clean
+clipboard
+clipcopy
+clippaste
+cmap
+cmdfd
+cmessage
+col
+collen
+colorname
+cols
+config.h
+cresize
+csidump
+csiescseq
+csihandle
+csiparse
+csireset
+cursor
+cursor_movement
+cursor_state
+cursorshape
+cursorthickness
+cw
+cwscale
+dc
+defaultattr
+defaultbg
+defaultcs
+defaultfg
+defaultfontsize
+defaultrcs
+descent
+die
+dirty
+dist
+doubleclicktimeout
+dpy
+draw
+drawregion
+esc
+escape_state
+eschandle
+evcol
+evrow
+execsh
+expose
+f
+fg
+flags
+focus
+font
+forcemousemod
+frc
+frccap
+frclen
+func
+gc
+getsel
+glyph_attribute
+gm
+h
+handler
+height
+hist
+histf
+histi
+i
+ibfont
+icharset
+idx
+ifont
+ignoremod
+ime
+install
+iofd
+isfixed
+k
+key
+keysym
+kmap
+kpress
+kscrolldown
+kscrollup
+l
+lastc
+lbearing
+len
+line
+main
+mappedkeys
+mask
+match
+maxlatency
+minlatency
+mod
+mode
+mouseaction
+mousebg
+mousefg
+mousereport
+mousesel
+mouseshape
+mshortcuts
+narg
+nb
+ne
+netwmiconname
+netwmname
+netwmpid
+numlock
+ob
+ocx
+ocy
+oe
+opt_class
+opt_cmd
+opt_embed
+opt_font
+opt_io
+opt_line
+opt_name
+opt_title
+osc_color_response
+pattern
+pid
+primary
+printscreen
+printsel
+priv
+propnotify
+rbearing
+redraw
+regionselected
+release
+resettitle
+resize
+row
+rows
+rscrolldown
+run
+s
+scr
+scroll
+scroll_mode
+sel
+selclear
+selclear_
+selected
+selection_mode
+selection_snap
+selection_type
+selextend
+selinit
+selmasks
+selmove
+selnormalize
+selnotify
+selpaste
+selremove
+selrequest
+selscroll
+selsnap
+selstart
+sendbreak
+set
+setsel
+shell
+shortcuts
+sigchld
+sixd_to_16bit
+siz
+snap
+specbuf
+spot
+spotlist
+st
+st.o
+state
+str
+strdump
+strescseq
+strhandle
+strparse
+strreset
+stty
+stty_args
+t
+tabs
+tabspaces
+tattrset
+tclearglyph
+tclearregion
+tclick1
+tclick2
+tcontrolcode
+tcursor
+tdectest
+tdefcolor
+tdeftran
+tdefutf8
+tdeletechar
+tdeleteline
+tdump
+tdumpline
+tdumpsel
+term
+term_mode
+termname
+tfulldirt
+tgetglyphs
+tgetline
+th
+tinsertblank
+tinsertblankline
+tisaltscr
+tisaltscreen
+tiswrapped
+tlinelen
+tloadaltscreen
+tloaddefscreen
+tmoveato
+tmoveto
+tnew
+tnewline
+toggleprinter
+top
+tprinter
+tputc
+tputtab
+trantbl
+treflow
+treset
+tresetcursor
+tresize
+tresizealt
+tresizedef
+tripleclicktimeout
+tscrolldown
+tscrollup
+tsetattr
+tsetchar
+tsetdirt
+tsetdirtattr
+tsetmode
+tsetscroll
+tstrsequence
+tswapscreen
+ttyhangup
+ttynew
+ttyread
+ttyresize
+ttysend
+ttywrite
+ttywriteraw
+tw
+twrite
+type
+u
+uchar
+ui
+uint
+ulong
+unicodep
+uninstall
+unmap
+usage
+usedfont
+usedfontsize
+ushort
+utf8decode
+utf8decodebyte
+utf8encode
+utf8encodebyte
+utf8validate
+utfbyte
+utfmask
+utfmax
+utfmin
+utmp
+v
+vis
+visibility
+vtiden
+w
+width
+win
+win_mode
+wmdeletewin
+worddelimiters
+wrapcwidth
+x
+x.o
+xbell
+xclear
+xclipcopy
+xdrawcursor
+xdrawglyph
+xdrawglyphfontspecs
+xdrawline
+xembed
+xfinishdraw
+xgeommasktogravity
+xgetcolor
+xhints
+xic
+xicdestroy
+xim
+ximdestroy
+ximinstantiate
+ximopen
+xinit
+xloadcolor
+xloadcols
+xloadfont
+xloadfonts
+xmakeglyphfontspecs
+xmalloc
+xrealloc
+xresize
+xsel
+xsetcolorname
+xsetcursor
+xsetenv
+xseticontitle
+xsetmode
+xsetpointermotion
+xsetsel
+xsettitle
+xseturgency
+xstartdraw
+xstrdup
+xtarget
+xunloadfont
+xunloadfonts
+xw
+xwrite
+xximspot
+y
+zoom
+zoomabs
+zoomreset

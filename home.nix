@@ -45,6 +45,7 @@
         nmap
         unixtools.xxd
         wget
+        gimp
         netcat-gnu
         unzip
         pythonEnv
