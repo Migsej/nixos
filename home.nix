@@ -65,7 +65,6 @@
       '';
     };
     programs.home-manager.enable = true;
-    programs.man.enable = true;
 
     programs.git = {
       enable = true;

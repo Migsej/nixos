@@ -11,6 +11,9 @@
       universal-ctags
     ];
     extraConfig = ''
+      hook global BufWritePost .*[.]tex %{ exec "!pdflatex *.tex &> /dev/null <ret>" }
+
+
       hook global InsertChar k %{ try %{
         exec -draft hH <a-k>jk<ret> d
         exec <esc>
@@ -57,12 +60,6 @@
         }
       ];
       keyMappings = [
-        {
-          docstring = "compiler latex";
-          mode = "user";
-          key = "t";
-          effect = ":w<ret>!pdflatex *.tex<ret>u";
-        }
         {
           docstring = "go to grep match";
           mode = "user";
