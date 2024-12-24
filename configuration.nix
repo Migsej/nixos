@@ -15,6 +15,10 @@
 
   hardware.opengl.extraPackages = [ pkgs.intel-compute-runtime ];
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
+  services.blueman.enable = true;
+
 
   nix.settings.experimental-features = "nix-command";
   systemd.coredump.enable = true;
@@ -145,6 +149,10 @@
     hashcat
     man-pages
     man-pages-posix
+  ];
+
+  fonts.packages = with pkgs; [
+    uiua386
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

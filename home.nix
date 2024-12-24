@@ -32,7 +32,7 @@
         zathura
         tetex
       ];
-      unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+      unstable = import <nixos-unstable-small> { config = { allowUnfree = true; }; };
     	in with pkgs; [
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
@@ -56,7 +56,8 @@
         wordlists
         prismlauncher
         pwndbg
-        arduino
+        bc
+        odin
       ] ++ school;
     programs.bash = {
       enable = true;
