@@ -47,6 +47,7 @@
         wget
         gimp
         netcat-gnu
+        gnumake
         unzip
         pythonEnv
         sxiv
@@ -58,6 +59,7 @@
         pwndbg
         bc
         odin
+        xorg.xbacklight
       ] ++ school;
     programs.bash = {
       enable = true;
