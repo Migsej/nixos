@@ -37,6 +37,7 @@
         (callPackage ./ctf-env.nix {})
         (callPackage ./ns/ns.nix {})
         (callPackage ./st/st.nix {})
+        (callPackage ./init/init.nix {})
         discord
         openvpn
         exiftool
