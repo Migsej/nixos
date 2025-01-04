@@ -38,6 +38,7 @@
         (callPackage ./ns/ns.nix {})
         (callPackage ./st/st.nix {})
         (callPackage ./init/init.nix {})
+        (callPackage ./binja.nix {})
         discord
         openvpn
         exiftool
