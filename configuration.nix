@@ -36,20 +36,6 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   networking.extraHosts = ''
-  77.28.251.54 danwind.hkn
-
-77.28.251.57 bitcrypt.hkn
-
-77.28.251.57 linkedin.hkn
-
-77.28.251.57 facebook.hkn
-
-77.28.251.57 email.hkn
-
-10.10.11.25 greenhorn.htb
-77.175.161.45 modicept.hkn
-
-
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

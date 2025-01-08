@@ -27,8 +27,11 @@ EOF
     cat << EOF > shell.nix
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
-    nativeBuildInputs = with pkgs; [ ];
+    nativeBuildInputs = with pkgs; [ (pkgs.python3.withPackages (python-pkgs: [
+      python-pkgs.pygame
+    ])) ];
 }
+
 EOF
 ;;
   "build.nix")

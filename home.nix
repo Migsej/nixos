@@ -4,7 +4,7 @@
 {
   home-manager.extraSpecialArgs = { inherit pkgs;};
   home-manager.users.migsej = {pkgs, ... }: {
-  home.pointerCursor = {
+    home.pointerCursor = {
         package = pkgs.gnome.adwaita-icon-theme;
         name = "Adwaita";
         size = 24;
