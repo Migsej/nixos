@@ -34,9 +34,9 @@ EOF
 
 EOF
 ;;
-  "build.nix")
+  "default.nix")
     echo "creating build.nix"
-    cat << EOF > build.nix
+    cat << EOF > default.nix
 {pkgs ? import <nixpkgs> {}}:
 pkgs.stdenv.mkDerivation {
   pname = "name";
