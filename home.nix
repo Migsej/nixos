@@ -30,7 +30,8 @@
         obsidian
         libreoffice
         zathura
-        tetex
+        # tetex
+        texliveFull
       ];
       unstable = import <nixos-unstable-small> { config = { allowUnfree = true; }; };
     	in with pkgs; [

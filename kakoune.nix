@@ -11,11 +11,10 @@
       universal-ctags
     ];
     extraConfig = ''
-      hook global BufWritePost .*[.]tex %{ exec "!pdflatex *.tex &> /dev/null <ret>" }
+      hook global BufWritePost .*[.]tex %{nop %sh{pdflatex -shell-escape $kak_buffile }}
       hook global BufCreate .*\.(inc)$ %{
         set-option buffer filetype gas
       }
-
 
 
       hook global InsertChar k %{ try %{
