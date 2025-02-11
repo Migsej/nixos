@@ -1,6 +1,6 @@
 {pkgs, ... }: {
   home.pointerCursor = {
-      package = pkgs.gnome.adwaita-icon-theme;
+      package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
       size = 24;
       x11.enable = true;
@@ -72,6 +72,6 @@
     userName = "migsej";
     userEmail = "vincentkbonne@gmail.com";
   };
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 }
 
