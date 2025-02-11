@@ -9,8 +9,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
-      ./home.nix
+      # <home-manager/nixos>
+      # ./home.nix
     ];
 
   hardware.opengl.extraPackages = [ pkgs.intel-compute-runtime ];
@@ -36,6 +36,9 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   networking.extraHosts = ''
+  77.61.246.189 formalbank.com
+  22.168.135.44 mail.aubergine.hkn
+  22.168.135.82 aubergine.hkn
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
