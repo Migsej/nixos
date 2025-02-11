@@ -13,6 +13,7 @@
       # ./home.nix
     ];
 
+
   hardware.graphics.extraPackages = [ pkgs.intel-compute-runtime ];
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
@@ -20,7 +21,7 @@
   services.blueman.enable = true;
 
 
-  nix.settings.experimental-features = "nix-command";
+  nix.settings.experimental-features = ["flakes" "nix-command"];
   systemd.coredump.enable = true;
   programs.slock.enable = true;
 
