@@ -11,12 +11,12 @@ for arg in "$@"; do
 done
 
 if [ $# -eq 0 ]; then
-  if [ -f shell.nix ]; then
-    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS shell.nix"
-    nix-shell
-  else
+  if [ -f flake.nix ]; then
     export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS develop"
     nix develop
+  else
+    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS shell.nix"
+    nix-shell
   fi
 else
   export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS $combined"
