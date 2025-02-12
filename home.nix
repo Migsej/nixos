@@ -35,6 +35,8 @@
       (callPackage ./st/st.nix {})
       (callPackage ./init/init.nix {})
       (callPackage ./binja.nix {})
+
+      # (builtins.getFlake "github:uiua-lang/uiua/73bfe4e1e25e7eb344333cd8846c09c87b8bfa3a").packages.x86_64-linux.default
       discord
       openvpn
       exiftool

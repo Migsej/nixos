@@ -11,9 +11,13 @@ for arg in "$@"; do
 done
 
 if [ $# -eq 0 ]; then
-  combined="shell.nix"
-  export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS shell.nix"
-  nix-shell
+  if [ -f shell.nix ]; then
+    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS shell.nix"
+    nix-shell
+  else
+    export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS develop"
+    nix develop
+  fi
 else
   export NIX_SHELL_DESCRIPTIONS="$NIX_SHELL_DESCRIPTIONS $combined"
   nix-shell -p $@
