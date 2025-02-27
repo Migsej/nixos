@@ -11,9 +11,10 @@
     NIX_SHELL_PRESERVE_PROMPT=1;
   };
   home.packages = let
+    mydebugger = pkgs.pwndbg;
   	pythonEnv = pkgs.python3.withPackages (p: with p; [
     	pycryptodome
-    	pwntools.override { debugger = pkgs.pwndbg; }
+    	(pwntools.override { debugger = mydebugger; })
     	ipython
     	tqdm
     	# angr
@@ -56,7 +57,7 @@
       gcc
       wordlists
       prismlauncher
-      pwndbg
+      mydebugger
       bc
       odin
       xorg.xbacklight
