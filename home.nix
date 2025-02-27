@@ -66,6 +66,7 @@
     enable = true;
     bashrcExtra = ''
       export PS1="\n\[\033[1;32m\][\[\e]0;\u@\h: \w\a\]\u@\h:\w$NIX_SHELL_DESCRIPTIONS]\$\[\033[0m\] "
+      export TERM_PROGRAMA="st"
     '';
   };
   programs.home-manager.enable = true;
