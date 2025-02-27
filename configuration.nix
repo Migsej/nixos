@@ -14,7 +14,8 @@
     ];
 
 
-  hardware.graphics.extraPackages = [ pkgs.intel-compute-runtime ];
+  hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = [ pkgs.intel-ocl pkgs.intel-compute-runtime ];
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -37,9 +38,8 @@
   networking.hostName = "nixos"; # Define your hostname.
 
   networking.extraHosts = ''
-  77.61.246.189 formalbank.com
-  22.168.135.44 mail.aubergine.hkn
-  22.168.135.82 aubergine.hkn
+  10.42.0.95 gcm.hkn
+  10.42.0.125 the-gauntlet.hkn
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

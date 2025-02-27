@@ -13,7 +13,7 @@
   home.packages = let
   	pythonEnv = pkgs.python3.withPackages (p: with p; [
     	pycryptodome
-    	pwntools
+    	pwntools.override { debugger = pkgs.pwndbg; }
     	ipython
     	tqdm
     	# angr
