@@ -54,6 +54,7 @@
       sxiv
       ghidra # NOTE unstable maybe
       binwalk
+      sage
       gcc
       wordlists
       prismlauncher
