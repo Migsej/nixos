@@ -27,8 +27,8 @@
       obsidian
       libreoffice
       zathura
-      # tetex
       texliveFull
+
     ];
   	in with pkgs; [
       (callPackage ./ctf-env.nix {})
