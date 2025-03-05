@@ -54,7 +54,8 @@
       sxiv
       ghidra # NOTE unstable maybe
       binwalk
-      sage
+    	(sage.override { extraPythonPackages = (ps: [ps.pycryptodome ps.tqdm ] ); requireSageTests = false;  })
+      # (sage.withPackages (p: [p.pycryptodome ]))
       gcc
       wordlists
       prismlauncher
