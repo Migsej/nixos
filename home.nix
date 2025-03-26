@@ -75,6 +75,8 @@
     '';
   };
   programs.home-manager.enable = true;
+  manual.manpages.enable = true;
+
 
   programs.git = {
     enable = true;

@@ -139,6 +139,7 @@
     hashcat
     man-pages
     man-pages-posix
+
   ];
 
   fonts.packages = with pkgs; [

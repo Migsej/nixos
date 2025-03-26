@@ -9,6 +9,7 @@
       rust-analyzer
       texlab
       universal-ctags
+      kakounePlugins.kak-ansi
     ];
     extraConfig = ''
       hook global BufWritePost .*[.]tex %{nop %sh{pdflatex -shell-escape $kak_buffile }}

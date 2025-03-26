@@ -1,0 +1,17 @@
+diff --git a/rc/tools/man.kak b/rc/tools/man.kak
+index 2fcc9814..2ad2770d 100644
+--- a/rc/tools/man.kak
++++ b/rc/tools/man.kak
+@@ -38,11 +38,7 @@ define-command -hidden -params ..3 man-impl %{ evaluate-commands %sh{
+     colout=$(mktemp "${TMPDIR:-/tmp}"/kak-man.XXXXXX)
+     env MANWIDTH=${kak_window_range##* } man "$@" > "$manout" 2> "$manerr"
+     retval=$?
+-    if command -v col >/dev/null; then
+-        col -b -x > ${colout} < ${manout}
+-    else
+-        sed 's/.//g' > ${colout} < ${manout}
+-    fi
++    sed -e 's/\x1b\[[0-9;]*m//g' > ${colout} < ${manout}
+     rm ${manout}
+ 
+     if [ "${retval}" -eq 0 ]; then
