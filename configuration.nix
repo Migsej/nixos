@@ -133,7 +133,6 @@
 
   environment.systemPackages = with pkgs; [
     xclip
-    git
     google-chrome
     wireguard-tools
     hashcat
