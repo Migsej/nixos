@@ -143,6 +143,7 @@
 
   fonts.packages = with pkgs; [
     uiua386
+    monocraft
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
