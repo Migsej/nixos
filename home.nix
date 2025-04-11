@@ -11,6 +11,7 @@
     GROFF_NO_SGR=1;
     NIX_SHELL_PRESERVE_PROMPT=1;
   };
+
   home.packages = let
     mydebugger = pkgs.pwndbg;
   	pythonEnv = pkgs.python3.withPackages (p: with p; [
@@ -28,6 +29,7 @@
       obsidian
       libreoffice
       zathura
+      inkscape
       texliveFull
 
     ];
@@ -84,6 +86,8 @@
     userName = "migsej";
     userEmail = "vincentkbonne@gmail.com";
   };
+
+
   home.stateVersion = "24.11";
 }
 

@@ -138,6 +138,7 @@
     hashcat
     man-pages
     man-pages-posix
+    nautilus
 
   ];
 
@@ -145,6 +146,13 @@
     uiua386
     monocraft
   ];
+
+  xdg.mime = {
+    defaultApplications = {
+      "inode/directory" = "org.gnome.Nautilus.desktop";
+    };
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
