@@ -48,6 +48,7 @@
       file
       nmap
       unixtools.xxd
+      zenity
       wget
       gimp
       netcat-gnu
