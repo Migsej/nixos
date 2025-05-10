@@ -47,6 +47,8 @@
       p7zip
       file
       nmap
+      wireshark
+      wineWowPackages.stable
       unixtools.xxd
       zenity
       wget
@@ -69,6 +71,7 @@
       mydebugger
       bc
       odin
+      badlion-client
       xorg.xbacklight
     ] ++ school;
   programs.bash = {
