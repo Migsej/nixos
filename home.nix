@@ -57,6 +57,7 @@
       gnumake
       unzip
       pythonEnv
+      mpv
       sxiv
       ghidra # NOTE unstable maybe
       binwalk
