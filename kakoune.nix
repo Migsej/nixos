@@ -27,10 +27,15 @@
           execute-keys "<esc>xyp<a-f>\<semicolon>ecendO<backspace><esc>O<esc>i"
         }
       }
+
+      add-highlighter global/ show-matching -previous
+      hook global WinSetOption filetype=python %{
+        jedi-enable-autocomplete
+      }
 '';
     config = {
       ui.assistant = "cat";
-      colorScheme = "palenight";
+      colorScheme = "gruvbox-dark";
       tabStop = 2;
       indentWidth = 2;
       numberLines = {
