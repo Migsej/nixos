@@ -23,8 +23,10 @@
 
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
-  systemd.coredump.enable = true;
   programs.slock.enable = true;
+  boot.kernel.sysctl = {
+     "kernel.core_pattern" = "core";
+   };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
