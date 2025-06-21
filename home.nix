@@ -68,11 +68,9 @@
       # (sage.withPackages (p: [p.pycryptodome ]))
       gcc
       wordlists
-      prismlauncher
       mydebugger
       bc
       odin
-      badlion-client
       xorg.xbacklight
     ] ++ school;
   programs.bash = {

@@ -32,10 +32,10 @@
       hook global WinSetOption filetype=python %{
         jedi-enable-autocomplete
       }
+      colorscheme tomorrow-night
 '';
     config = {
       ui.assistant = "cat";
-      colorScheme = "gruvbox-dark";
       tabStop = 2;
       indentWidth = 2;
       numberLines = {
