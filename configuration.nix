@@ -33,9 +33,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   virtualisation.docker.enable = true;
-  virtualisation.virtualbox.host.enable = true;
-  #virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
