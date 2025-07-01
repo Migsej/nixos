@@ -21,12 +21,11 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
   services.blueman.enable = true;
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
   programs.slock.enable = true;
-  boot.kernel.sysctl = {
-     "kernel.core_pattern" = "core";
-   };
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

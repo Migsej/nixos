@@ -48,6 +48,7 @@
       file
       nmap
       wireshark
+      burpsuite
       wineWowPackages.stable
       unixtools.xxd
       zenity
