@@ -38,6 +38,7 @@
   networking.extraHosts = ''
   10.42.0.95 gcm.hkn
   10.42.0.125 the-gauntlet.hkn
+  10.10.214.14 lookup.thm
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -131,7 +132,7 @@
 
   environment.systemPackages = with pkgs; [
     xclip
-    google-chrome
+    firefox
     wireguard-tools
     hashcat
     man-pages
