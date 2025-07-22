@@ -25,7 +25,6 @@
     	gmpy2
   	]);
   	school = with pkgs; [
-      kicad
       obsidian
       libreoffice
       zathura
@@ -74,6 +73,7 @@
       bc
       odin
       xorg.xbacklight
+      typst
     ] ++ school;
   programs.bash = {
     enable = true;
