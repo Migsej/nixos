@@ -10,6 +10,7 @@
   home.sessionVariables = {
     GROFF_NO_SGR=1;
     NIX_SHELL_PRESERVE_PROMPT=1;
+    CDPATH="/home/migsej";
   };
 
   home.packages = let

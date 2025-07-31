@@ -23,7 +23,6 @@
 
   boot.supportedFilesystems = [ "ntfs" ];
 
-
   nix.settings.experimental-features = ["flakes" "nix-command"];
   programs.slock.enable = true;
 
