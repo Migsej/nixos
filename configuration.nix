@@ -34,6 +34,8 @@
 
   networking.hostName = "nixos"; # Define your hostname.
 
+  nixpkgs.config.allowBroken = true;
+
   networking.extraHosts = ''
   10.42.0.95 gcm.hkn
   10.42.0.125 the-gauntlet.hkn
@@ -49,7 +51,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Copenhagen";
+  time.timeZone = "Europe/Tallinn";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_DK.UTF-8";
