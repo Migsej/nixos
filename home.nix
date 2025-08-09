@@ -47,6 +47,7 @@
       file
       nmap
       wireshark
+      btop
       burpsuite
       wineWowPackages.stable
       unixtools.xxd
