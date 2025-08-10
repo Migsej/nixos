@@ -1,16 +1,19 @@
 {
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-24.11";
+    unstable.url = "nixpkgs/nixpkgs-unstable";
+
 
     home-manager = {
       url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, home-manager }@attrs: {
+  outputs = { self, nixpkgs, home-manager, unstable }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
       # pkgs = import nixpkgs { inherit system; config = { allowUnfree = true; };};
       system = "x86_64-linux";
+      specialArgs = { inherit unstable; };
       modules = [ ./configuration.nix
                   home-manager.nixosModules.home-manager {
                     home-manager.useGlobalPkgs = true;

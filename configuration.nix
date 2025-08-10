@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, unstable, ... }:
 
 
 {
@@ -133,13 +133,13 @@
 
   environment.systemPackages = with pkgs; [
     xclip
-    firefox
+    # firefox
     wireguard-tools
     hashcat
     man-pages
     man-pages-posix
     nautilus
-
+    unstable.firefox
   ];
 
   fonts.packages = with pkgs; [
