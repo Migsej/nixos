@@ -76,6 +76,7 @@
       xorg.xbacklight
       typst
       qutebrowser
+      bitwarden-cli
     ] ++ school;
   programs.bash = {
     enable = true;
