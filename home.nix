@@ -38,6 +38,7 @@
       (callPackage ./st/st.nix {})
       (callPackage ./init/init.nix {})
       (callPackage ./binja.nix {})
+      (callPackage ./dotfiles/qutebrowser/qute-bitwarden.nix {})
 
       # (builtins.getFlake "github:uiua-lang/uiua/73bfe4e1e25e7eb344333cd8846c09c87b8bfa3a").packages.x86_64-linux.default
       discord
@@ -75,6 +76,7 @@
       odin
       xorg.xbacklight
       typst
+      qutebrowser
     ] ++ school;
   programs.bash = {
     enable = true;
@@ -85,7 +87,6 @@
   };
   programs.home-manager.enable = true;
   manual.manpages.enable = true;
-
 
   programs.git = {
     enable = true;
