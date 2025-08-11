@@ -87,6 +87,8 @@
   programs.home-manager.enable = true;
   manual.manpages.enable = true;
 
+  xdg.configFile."qutebrowser/autoconfig.yml".source = ./dotfiles/qutebrowser/autoconfig.yml;
+
   programs.git = {
     enable = true;
     userName = "migsej";
