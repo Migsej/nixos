@@ -5,6 +5,12 @@
 { config, pkgs, unstable, ... }:
 
 
+let
+  unstablePkgs = import unstable {
+  system = pkgs.system;
+  config.allowUnfree = true;  # optional
+};
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -139,7 +145,9 @@
     man-pages
     man-pages-posix
     nautilus
-    unstable.firefox
+    unstablePkgs.bitwarden-cli
+    unstablePkgs.bitwarden-desktop
+    keyutils
   ];
 
   fonts.packages = with pkgs; [
