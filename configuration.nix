@@ -57,7 +57,7 @@ in
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Tallinn";
+  time.timeZone = "Europe/Copenhagen";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_DK.UTF-8";
