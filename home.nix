@@ -76,6 +76,7 @@
       xorg.xbacklight
       typst
       qutebrowser
+      firefox
     ] ++ school;
   programs.bash = {
     enable = true;
@@ -87,7 +88,7 @@
   programs.home-manager.enable = true;
   manual.manpages.enable = true;
 
-  xdg.configFile."qutebrowser/autoconfig.yml".source = ./dotfiles/qutebrowser/autoconfig.yml;
+  xdg.configFile."qutebrowser/config.py".source = ./dotfiles/qutebrowser/config.py;
 
   programs.git = {
     enable = true;
