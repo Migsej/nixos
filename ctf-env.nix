@@ -54,6 +54,10 @@ pkgs.buildFHSUserEnv {
       xorg.libXrender
       xorg.libXft
       openal
+      fuse3
+      vulkan-headers
+      vulkan-loader
+      vulkan-validation-layers
       SDL
       gtk3
       gtk3-x11

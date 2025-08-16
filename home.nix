@@ -83,6 +83,7 @@
     bashrcExtra = ''
       export PS1="\n\[\033[1;32m\][\[\e]0;\u@\h: \w\a\]\u@\h:\w$NIX_SHELL_DESCRIPTIONS]\$\[\033[0m\] "
       TERM_PROGRAM="st";
+      alias printletterfreq='echo _eE3aA4rRiI1oO0tT7nNsS25lLcCuUdDpPmMhHgG6bBfFyYwWkKvVxXzZjJqQ89 && echo _e3a4ri1o0t7ns25lcudpmhg6bfywkvxzjq89 && echo _E3A4RI1O0T7NS25LCUDPMHG6BFYWKVXZJQ89 && echo etaoinshrdlcumwfgypbvkjxqz && echo ETAOINSHRDLCUMWFGYPBVKJXQZ'
     '';
   };
   programs.home-manager.enable = true;

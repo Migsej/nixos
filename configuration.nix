@@ -136,7 +136,10 @@ in
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+  environment.etc."fuse.conf".text = ''
+user_allow_other
+mount_max = 1000
+'';
   environment.systemPackages = with pkgs; [
     xclip
     # firefox
