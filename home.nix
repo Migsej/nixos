@@ -68,6 +68,7 @@
     	})
       # (sage.withPackages (p: [p.pycryptodome ]))
       gcc
+      jadx
       qbittorrent
       wordlists
       mydebugger
