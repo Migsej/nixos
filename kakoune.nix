@@ -33,6 +33,7 @@
         jedi-enable-autocomplete
       }
       colorscheme tomorrow-night
+      source ${./typst.kak}
 '';
     config = {
       ui.assistant = "cat";

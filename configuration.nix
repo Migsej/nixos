@@ -150,6 +150,7 @@ mount_max = 1000
     nautilus
     unstablePkgs.bitwarden-cli
     unstablePkgs.bitwarden-desktop
+    unstablePkgs.proton-pass
     keyutils
   ];
 
