@@ -151,6 +151,7 @@ mount_max = 1000
     unstablePkgs.bitwarden-cli
     unstablePkgs.bitwarden-desktop
     unstablePkgs.proton-pass
+    unstablePkgs.protonvpn-gui
     keyutils
   ];
 
@@ -167,6 +168,8 @@ mount_max = 1000
     "x-scheme-handler/about" = "org.qutebrowser.qutebrowser.desktop";
     "x-scheme-handler/unknown" = "org.qutebrowser.qutebrowser.desktop";
   };
+
+  networking.firewall.checkReversePath = false;
 
 
   # Some programs need SUID wrappers, can be configured further or are
