@@ -167,6 +167,7 @@ mount_max = 1000
     "x-scheme-handler/https" = "org.qutebrowser.qutebrowser.desktop";
     "x-scheme-handler/about" = "org.qutebrowser.qutebrowser.desktop";
     "x-scheme-handler/unknown" = "org.qutebrowser.qutebrowser.desktop";
+    "application/pdf" = "org.pwmt.zathura.desktop";
   };
 
   networking.firewall.checkReversePath = false;

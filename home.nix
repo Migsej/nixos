@@ -27,7 +27,7 @@
   	school = with pkgs; [
       obsidian
       libreoffice
-      zathura
+      (zathura.override { useMupdf = true; })
       inkscape
       texliveFull
 
