@@ -27,7 +27,7 @@
   	school = with pkgs; [
       obsidian
       libreoffice
-      (zathura.override { useMupdf = true; })
+      zathura
       inkscape
       texliveFull
 
@@ -78,6 +78,7 @@
       typst
       qutebrowser
       firefox
+      jq
     ] ++ school;
   programs.bash = {
     enable = true;
