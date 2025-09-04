@@ -15,4 +15,6 @@ c.url.searchengines = {
     "ns": "https://search.nixos.org/packages?query={}",
 }
 
+c.content.notifications.enabled = False
+c.content.register_protocol_handler = False
 
