@@ -45,7 +45,6 @@
       exiftool
       p7zip
       file
-      qemu-user
       debootstrap
       nmap
       wireshark
