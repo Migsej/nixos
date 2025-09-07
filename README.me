@@ -1,0 +1,6 @@
+
+```sh
+sudo debootstrap --arch=armel --foreign bookworm /tmp/armel-rootfs http://deb.debian.org/debian
+qemu-arm -L /tmp/armel-rootfs ./ret2win_armv5
+```
+

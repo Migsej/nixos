@@ -63,9 +63,11 @@ pkgs.buildFHSUserEnv {
       gtk3-x11
       libGL
       zlib
+      zlib-ng
       dotnet-runtime
       libpng12
       SDL2
+      geos
       fuse
     ]);
 }

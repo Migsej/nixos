@@ -45,6 +45,8 @@
       exiftool
       p7zip
       file
+      qemu-user
+      debootstrap
       nmap
       wireshark
       btop
@@ -71,6 +73,7 @@
       jadx
       qbittorrent
       wordlists
+      qemu
       mydebugger
       bc
       odin
