@@ -61,10 +61,16 @@
       ];
       keyMappings = [
         {
-          docstring = "go to grep match";
+          docstring = "go to next grep match";
           mode = "user";
           key = "g";
-          effect = ":grep-jump<ret>";
+          effect = ":grep-next-match<ret>";
+        }
+        {
+          docstring = "go to next make match";
+          mode = "user";
+          key = "m";
+          effect = ":make-next-match<ret>";
         }
         {
          docstring = "yank the selection into the clipboard";

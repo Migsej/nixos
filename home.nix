@@ -72,6 +72,7 @@
       jadx
       qbittorrent
       wordlists
+      android-studio
       qemu
       mydebugger
       bc
