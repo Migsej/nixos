@@ -41,7 +41,6 @@
       indentWidth = 2;
       numberLines = {
         enable = true;
-        relative = true;
       };
       wrapLines = {
         enable = true;

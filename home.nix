@@ -82,6 +82,7 @@
       qutebrowser
       firefox
       jq
+      (pkgs.writeShellScriptBin "nbc" ''sed -e '$a\' | bc '')
     ] ++ school;
   programs.bash = {
     enable = true;
