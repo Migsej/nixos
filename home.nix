@@ -74,6 +74,7 @@
       wordlists
       android-studio
       qemu
+      semgrep
       mydebugger
       bc
       odin
