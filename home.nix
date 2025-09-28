@@ -40,7 +40,6 @@
       (callPackage ./binja.nix {})
 
       # (builtins.getFlake "github:uiua-lang/uiua/73bfe4e1e25e7eb344333cd8846c09c87b8bfa3a").packages.x86_64-linux.default
-      discord
       openvpn
       exiftool
       p7zip
@@ -61,7 +60,9 @@
       pythonEnv
       mpv
       sxiv
-      ghidra # NOTE unstable maybe
+#       (ghidra.withExtensions (p: with p; [
+#         wasm
+#       ]))
       binwalk
     	(sage.override {
       	extraPythonPackages = (ps: [ps.pycryptodome ps.tqdm ps.pwntools ] );
@@ -81,6 +82,7 @@
       xorg.xbacklight
       typst
       qutebrowser
+      socat
       firefox
       jq
       (pkgs.writeShellScriptBin "nbc" ''sed -e '$a\' | bc '')
