@@ -43,12 +43,6 @@ in
   nixpkgs.config.allowBroken = true;
 
   networking.extraHosts = ''
-  10.42.0.95 gcm.hkn
-  10.42.0.125 the-gauntlet.hkn
-  10.10.214.14 lookup.thm
-  91.98.121.169 vulnbox-remote
-  fd66:666:447::2 vulnbox
-  fd66:666:1::2 nopteam
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -177,6 +171,7 @@ mount_max = 1000
 
   networking.firewall.checkReversePath = false;
 
+  programs.nix-ld.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

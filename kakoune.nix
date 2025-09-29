@@ -66,6 +66,12 @@
           effect = ":grep-next-match<ret>";
         }
         {
+          docstring = "netctags";
+          mode = "user";
+          key = "s";
+          effect = ":ctags-search<ret>";
+        }
+        {
           docstring = "go to next make match";
           mode = "user";
           key = "m";
