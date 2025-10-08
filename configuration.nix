@@ -7,9 +7,9 @@
 
 let
   unstablePkgs = import unstable {
-  system = pkgs.system;
-  config.allowUnfree = true;  # optional
-};
+    system = pkgs.system;
+    config.allowUnfree = true; 
+  };
 in
 {
   imports =
@@ -37,12 +37,16 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
 
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
   nixpkgs.config.allowBroken = true;
 
   networking.extraHosts = ''
+  10.42.9.2 vulnbox
+  10.42.9.3 attack2
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
