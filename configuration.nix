@@ -45,8 +45,6 @@ in
   nixpkgs.config.allowBroken = true;
 
   networking.extraHosts = ''
-  10.42.9.2 vulnbox
-  10.42.9.3 attack2
   '';
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
