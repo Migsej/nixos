@@ -6,7 +6,7 @@
       x11.enable = true;
   };
   imports = [ ./kakoune.nix ];
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
   home.sessionVariables = {
     GROFF_NO_SGR=1;
     NIX_SHELL_PRESERVE_PROMPT=1;
@@ -73,7 +73,6 @@
       jadx
       qbittorrent
       wordlists
-      android-studio
       qemu
       semgrep
       mydebugger

@@ -18,7 +18,7 @@ let
   '';
 in
 
-pkgs.buildFHSUserEnv {
+pkgs.buildFHSEnv {
   name = "ctf-env";
   runScript = inner;
   targetPkgs =
@@ -28,7 +28,6 @@ pkgs.buildFHSUserEnv {
       ltrace
       nasm
       one_gadget
-      pwndbg
       pwninit
       ropgadget
       socat

@@ -1,20 +1,28 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs.url = "nixpkgs/nixos-25.05";
     unstable.url = "nixpkgs/nixpkgs-unstable";
 
-
+    pwndbg.url = "github:pwndbg/pwndbg";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.11";
+      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { self, nixpkgs, home-manager, unstable }@attrs: {
+  outputs = { self, nixpkgs, home-manager, unstable, pwndbg }@attrs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
-      # pkgs = import nixpkgs { inherit system; config = { allowUnfree = true; };};
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+        overlays = [
+          (final: prev: {
+            pwndbg = pwndbg.packages.${system}.pwndbg;
+          })
+        ];
+      };
       system = "x86_64-linux";
-      specialArgs = { inherit unstable; };
+      specialArgs = attrs // { inherit unstable pwndbg; } ;
       modules = [ ./configuration.nix
                   home-manager.nixosModules.home-manager {
                     home-manager.useGlobalPkgs = true;

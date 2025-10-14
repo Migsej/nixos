@@ -37,12 +37,10 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
 
   virtualisation.docker.enable = true;
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
-  nixpkgs.config.allowBroken = true;
+  # nixpkgs.config.allowBroken = true;
 
   networking.extraHosts = ''
   '';
@@ -134,7 +132,7 @@ in
   
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
   environment.etc."fuse.conf".text = ''
 user_allow_other
 mount_max = 1000
