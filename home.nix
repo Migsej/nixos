@@ -102,7 +102,7 @@
   programs.git = {
     enable = true;
     userName = "migsej";
-    userEmail = "vincentkbonne@gmail.com";
+    userEmail = "vincent.kb@pm.me";
   };
 
 

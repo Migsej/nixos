@@ -42,6 +42,7 @@ install: st
 	sed "s/VERSION/$(VERSION)/g" < st.1 > $(DESTDIR)$(MANPREFIX)/man1/st.1
 	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/st.1
 	tic -sx st.info
+	ln -s $(DESTDIR)$(PREFIX)/bin/st $(DESTDIR)$(PREFIX)/bin/pwntools-terminal
 	@echo Please see the README file regarding the terminfo entry of st.
 
 uninstall:
