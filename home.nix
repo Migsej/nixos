@@ -50,6 +50,7 @@
       btop
       burpsuite
       wineWowPackages.stable
+      winetricks
       unixtools.xxd
       zenity
       wget

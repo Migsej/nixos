@@ -30,6 +30,7 @@ pkgs.buildFHSEnv {
       one_gadget
       pwninit
       ropgadget
+      patchelf
       socat
       strace
       tmux
@@ -68,5 +69,35 @@ pkgs.buildFHSEnv {
       SDL2
       geos
       fuse
+
+    glib
+    nss
+    nspr
+    dbus
+    atk
+    cups
+    libdrm
+    gtk3
+    pango
+    cairo
+    xorg.libICE
+    xorg.libSM
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXrandr
+    xorg.libXi
+    xorg.libXext
+    xorg.libXrender
+    xorg.libXft
+    xorg.libXcomposite
+    xorg.libXdamage
+    xorg.libXfixes
+    libgbm
+    expat
+    xorg.libxcb
+    libxkbcommon
+    alsa-lib
+    libGL
+
     ]);
 }

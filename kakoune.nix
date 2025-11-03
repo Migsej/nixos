@@ -5,6 +5,7 @@
     enable = true;
     plugins = with pkgs; [
       universal-ctags
+      python313Packages.editorconfig
       kakounePlugins.kak-ansi
     ];
     extraConfig = ''
@@ -27,12 +28,14 @@
           execute-keys "<esc>xyp<a-f>\<semicolon>ecendO<backspace><esc>O<esc>i"
         }
       }
+      hook global BufOpenFile .* editorconfig-load
+      hook global BufNewFile .* editorconfig-load
 
       add-highlighter global/ show-matching -previous
       hook global WinSetOption filetype=python %{
         jedi-enable-autocomplete
       }
-      colorscheme tomorrow-night
+      colorscheme gruvbox-light
       source ${./typst.kak}
 '';
     config = {
