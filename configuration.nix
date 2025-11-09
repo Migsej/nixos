@@ -74,6 +74,7 @@ in
   #security.polkit.enable = true;
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.vnstat.enable = true;
 
   services.displayManager.defaultSession = "none+i3";
   services.xserver.desktopManager.xterm.enable = false;
@@ -102,7 +103,13 @@ in
   console.keyMap = "dk-latin1";
 
   # Enable CUPS to print documents.
-  # services.printing.enable = true;
+  services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
@@ -172,6 +179,8 @@ mount_max = 1000
   networking.firewall.checkReversePath = false;
 
   programs.nix-ld.enable = true;
+
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
