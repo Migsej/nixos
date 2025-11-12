@@ -38,6 +38,7 @@
       (callPackage ./st/st.nix {})
       (callPackage ./init/init.nix {})
       (callPackage ./binja.nix {})
+      (callPackage ./i3-battery-popup/i3-battery-popup.nix {})
 
       # (builtins.getFlake "github:uiua-lang/uiua/73bfe4e1e25e7eb344333cd8846c09c87b8bfa3a").packages.x86_64-linux.default
       openvpn
@@ -79,6 +80,7 @@
       mydebugger
       bc
       odin
+      zip
       xorg.xbacklight
       typst
       qutebrowser

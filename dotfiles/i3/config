@@ -37,6 +37,7 @@ exec --no-startup-id flameshot
 exec --no-startup-id dunst
 exec --no-startup-id blueman-applet
 exec --no-startup-id protonvpn-app --start-minimized
+exec --no-startup-id i3-battery-popup -n -D -L 20 -l 10
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
