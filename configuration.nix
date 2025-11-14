@@ -162,7 +162,7 @@ mount_max = 1000
   ];
 
   fonts.packages = with pkgs; [
-    uiua386
+    (builtins.getFlake "github:uiua-lang/uiua/ec1e9970559f99e287092e3edc494d27a12a9151").packages.x86_64-linux.fonts
     monocraft
   ];
 

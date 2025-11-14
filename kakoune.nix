@@ -37,6 +37,7 @@
       }
       colorscheme gruvbox-light
       source ${./typst.kak}
+      source ${./uiua.kak}
 '';
     config = {
       ui.assistant = "cat";
