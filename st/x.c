@@ -60,6 +60,7 @@ static void zoom(const Arg *);
 static void zoomabs(const Arg *);
 static void zoomreset(const Arg *);
 static void ttysend(const Arg *);
+static void cyclefonts(const Arg *);
 
 /* config.h for applying patches and the configuration. */
 #include "config.h"
@@ -983,6 +984,18 @@ xloadfont(Font *f, FcPattern *pattern)
 }
 
 void
+cyclefonts(const Arg *dummy)
+{
+	fonts_current++;
+	if (fonts_current > (sizeof fonts / sizeof fonts[0]) - 1) {
+		fonts_current = 0;
+	}
+	usedfont = fonts[fonts_current];
+	xloadfonts(fonts[fonts_current], 0);
+	redraw();
+}
+
+void
 xloadfonts(const char *fontstr, double fontsize)
 {
 	FcPattern *pattern;
@@ -1146,8 +1159,8 @@ xinit(int cols, int rows)
 	if (!FcInit())
 		die("could not init fontconfig.\n");
 
-	usedfont = (opt_font == NULL)? font : opt_font;
-	xloadfonts(usedfont, 0);
+	usedfont = fonts[fonts_current];
+	xloadfonts(fonts[fonts_current], 0);
 
 	/* colors */
 	xw.cmap = XDefaultColormap(xw.dpy, xw.scr);

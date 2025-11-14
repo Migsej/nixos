@@ -40,7 +40,7 @@
       (callPackage ./binja.nix {})
       (callPackage ./i3-battery-popup/battery.nix {})
 
-      (builtins.getFlake "github:uiua-lang/uiua/ec1e9970559f99e287092e3edc494d27a12a9151").packages.x86_64-linux.default
+      (builtins.getFlake "github:uiua-lang/uiua/94d36d1f6ed64a3d3dfaaba0fef854e06771ca46").packages.x86_64-linux.default
       openvpn
       exiftool
       p7zip

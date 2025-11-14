@@ -7,6 +7,11 @@
  */
 // static char *font = "Liberation Mono:pixelsize=24:antialias=true:autohint=true";
 static char *font = "uiua386:pixelsize=24:antialias=true:autohint=true";
+static char *fonts[] = {
+  "uiua386:pixelsize=24:antialias=true:autohint=true",
+  "monocraft:pixelsize=24:antialias=true:autohint=true"
+};
+static int fonts_current = 0;
 static int borderpx = 2;
 
 /*
@@ -199,6 +204,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
   { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+  { TERMMOD,              XK_S,           cyclefonts,     {}        },
 };
 
 /*
