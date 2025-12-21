@@ -8,8 +8,8 @@
 // static char *font = "Liberation Mono:pixelsize=24:antialias=true:autohint=true";
 static char *font = "uiua386:pixelsize=24:antialias=true:autohint=true";
 static char *fonts[] = {
+  "monocraft:pixelsize=24:antialias=true:autohint=true",
   "uiua386:pixelsize=24:antialias=true:autohint=true",
-  "monocraft:pixelsize=24:antialias=true:autohint=true"
 };
 static int fonts_current = 0;
 static int borderpx = 2;
@@ -101,36 +101,37 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
- 	/* 8 normal colors */
-  "#fbf1c7",
-  "#cc241d",
-  "#98971a",
-  "#d79921",
-  "#458588",
-  "#b16286",
-  "#689d6a",
-  "#7c6f64",
+	/* 8 normal colors */
+  "#1d1f21",
+  "#cc6666",
+  "#b5bd68",
+  "#f0c674",
+  "#81a2be",
+  "#b294bb",
+  "#8abeb7",
+  "#c5c8c6",
 
-  "#928374",
-  "#9d0006",
-  "#79740e",
-  "#b57614",
-  "#076678",
-  "#8f3f71",
-  "#427b58",
-  "#3c3836",
+  "#666666",
+  "#d54e53",
+  "#b9ca4a",
+  "#e7c547",
+  "#7aa6da",
+  "#c397d8",
+  "#70c0b1",
+  "#eaeaea",
   [256]="#cccccc",
   "#555555"
 };
+
 
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
+unsigned int defaultfg = 7;
 unsigned int defaultbg = 0;
-unsigned int defaultcs = 15;
+unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
 /*

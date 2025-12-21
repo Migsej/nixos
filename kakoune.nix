@@ -35,9 +35,10 @@
       hook global WinSetOption filetype=python %{
         jedi-enable-autocomplete
       }
-      colorscheme gruvbox-light
+      colorscheme gruvbox-dark
       source ${./typst.kak}
       source ${./uiua.kak}
+      source ${./lean.kak}
 '';
     config = {
       ui.assistant = "cat";

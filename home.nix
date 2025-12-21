@@ -39,8 +39,9 @@
       (callPackage ./init/init.nix {})
       (callPackage ./binja.nix {})
       (callPackage ./i3-battery-popup/battery.nix {})
+      (callPackage ./observer/observer.nix {})
 
-      (builtins.getFlake "github:uiua-lang/uiua/94d36d1f6ed64a3d3dfaaba0fef854e06771ca46").packages.x86_64-linux.default
+      (builtins.getFlake "github:uiua-lang/uiua/5c4e9f051469d7707816871c342890459c70467d").packages.x86_64-linux.default
       openvpn
       exiftool
       p7zip
@@ -87,6 +88,7 @@
       socat
       firefox
       jq
+      prismlauncher
       (pkgs.writeShellScriptBin "nbc" ''sed -e '$a\' | bc '')
     ] ++ school;
   programs.bash = {
@@ -104,7 +106,7 @@
 
   programs.git = {
     enable = true;
-    userName = "migsej";
+    userName = "Vincent";
     userEmail = "vincent.kb@pm.me";
   };
 
