@@ -155,7 +155,7 @@ mount_max = 1000
     unstablePkgs.bitwarden-cli
     unstablePkgs.bitwarden-desktop
     unstablePkgs.proton-pass
-    unstablePkgs.protonvpn-gui
+    protonvpn-gui
     unstablePkgs.ghidra
     unstablePkgs.discord
     keyutils
@@ -182,6 +182,20 @@ mount_max = 1000
 
   boot.loader.systemd-boot.configurationLimit = 10;
 
+  services.postgresql = {
+    enable = true;
+    ensureUsers = [
+      {
+        name = "migsej";
+        ensureDBOwnership = true;
+      }
+    ];
+    ensureDatabases = [ "migsej" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
+  };
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

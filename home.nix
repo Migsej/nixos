@@ -1,4 +1,4 @@
-{pkgs, ... }: {
+{pkgs, unstable, ... }: {
   home.pointerCursor = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
@@ -40,6 +40,7 @@
       (callPackage ./binja.nix {})
       (callPackage ./i3-battery-popup/battery.nix {})
       (callPackage ./observer/observer.nix {})
+      (callPackage ./angr-management/angr.nix {})
 
       (builtins.getFlake "github:uiua-lang/uiua/5c4e9f051469d7707816871c342890459c70467d").packages.x86_64-linux.default
       openvpn
@@ -78,6 +79,7 @@
       wordlists
       qemu
       semgrep
+      openjdk
       mydebugger
       bc
       odin
@@ -106,10 +108,11 @@
 
   programs.git = {
     enable = true;
-    userName = "Vincent";
-    userEmail = "vincent.kb@pm.me";
+    settings.user = {
+      name = "Vincent";
+      email = "vincent.kb@pm.me";
+    };
   };
-
 
   home.stateVersion = "24.11";
 }

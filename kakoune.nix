@@ -1,7 +1,15 @@
 { pkgs, ... }:
-
 {
   programs.kakoune = {
+    package = pkgs.kakoune-unwrapped.overrideAttrs (old: {
+      src = pkgs.fetchFromGitHub {
+        owner = "mawww";
+        repo = "kakoune";
+        rev = "3f0017316457c52dcc0ce7d68db4c27ae3d2ecf1";
+        hash = "sha256-cDBXqzxVkRVbOByFLJpCqgvwcDXuSb1ijeLb+ZRemKs=";
+      };
+    });
+
     enable = true;
     plugins = with pkgs; [
       universal-ctags
@@ -35,8 +43,8 @@
       hook global WinSetOption filetype=python %{
         jedi-enable-autocomplete
       }
+
       colorscheme gruvbox-dark
-      source ${./typst.kak}
       source ${./uiua.kak}
       source ${./lean.kak}
 '';
@@ -93,6 +101,12 @@
          mode = "user";
          key = "p";
          effect = "!xclip -selection clipboard -o<ret>";
+        }
+        {
+         docstring = "convert unicode";
+         mode = "user";
+         key = "c";
+         effect = "|${./unicode.sh}<ret>";
         }
       ];
     };

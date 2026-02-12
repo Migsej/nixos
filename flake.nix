@@ -1,12 +1,12 @@
 {
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-25.05";
+    nixpkgs.url = "nixpkgs/nixos-25.11";
     unstable.url = "nixpkgs/nixpkgs-unstable";
 
     pwndbg.url = "github:pwndbg/pwndbg";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -27,6 +27,7 @@
                   home-manager.nixosModules.home-manager {
                     home-manager.useGlobalPkgs = true;
                     home-manager.useUserPackages = true;
+                    home-manager.extraSpecialArgs = { inherit unstable; };
                     home-manager.users.migsej = import ./home.nix;
                   }
                   # This fixes nixpkgs (for e.g. "nix shell") to match the system nixpkgs
