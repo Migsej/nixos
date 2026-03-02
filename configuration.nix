@@ -7,7 +7,7 @@
 
 let
   unstablePkgs = import unstable {
-    system = pkgs.system;
+    system = pkgs.stdenv.hostPlatform.system;
     config.allowUnfree = true; 
   };
 in
@@ -15,8 +15,6 @@ in
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # <home-manager/nixos>
-      # ./home.nix
     ];
 
 
@@ -37,6 +35,8 @@ in
   boot.loader.efi.canTouchEfiVariables = true;
 
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "migsej" ];
 
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -146,19 +146,17 @@ mount_max = 1000
 '';
   environment.systemPackages = with pkgs; [
     xclip
-    # firefox
     wireguard-tools
     hashcat
     man-pages
     man-pages-posix
     nautilus
-    unstablePkgs.bitwarden-cli
-    unstablePkgs.bitwarden-desktop
     unstablePkgs.proton-pass
     protonvpn-gui
     unstablePkgs.ghidra
     unstablePkgs.discord
     keyutils
+    xorg.xbacklight
   ];
 
   fonts.packages = with pkgs; [

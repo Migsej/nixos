@@ -25,12 +25,10 @@
     	gmpy2
   	]);
   	school = with pkgs; [
-      obsidian
       libreoffice
       zathura
       inkscape
       texliveFull
-
     ];
   	in with pkgs; [
       (callPackage ./ctf-env.nix {})
@@ -62,23 +60,19 @@
       gnumake
       unzip
       pythonEnv
+      gdb
       mpv
       sxiv
-#       (ghidra.withExtensions (p: with p; [
-#         wasm
-#       ]))
       binwalk
     	(sage.override {
       	extraPythonPackages = (ps: [ps.pycryptodome ps.tqdm ps.pwntools ] );
       	requireSageTests = false;
     	})
-      # (sage.withPackages (p: [p.pycryptodome ]))
       gcc
       jadx
       qbittorrent
       wordlists
       qemu
-      semgrep
       openjdk
       mydebugger
       bc
@@ -105,6 +99,9 @@
   manual.manpages.enable = true;
 
   xdg.configFile."qutebrowser/config.py".source = ./dotfiles/qutebrowser/config.py;
+  xdg.configFile."gdb/gdbinit".text = ''
+    set debuginfod enabled off
+    '';
 
   programs.git = {
     enable = true;
