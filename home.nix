@@ -60,7 +60,6 @@
       gnumake
       unzip
       pythonEnv
-      gdb
       mpv
       sxiv
       binwalk
