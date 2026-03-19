@@ -19,7 +19,7 @@ in
 
 
   hardware.graphics.enable = true;
-  hardware.graphics.extraPackages = [ pkgs.intel-ocl pkgs.intel-compute-runtime ];
+  # hardware.graphics.extraPackages = [ pkgs.intel-ocl pkgs.intel-compute-runtime ];
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
