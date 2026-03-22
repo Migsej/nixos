@@ -101,6 +101,11 @@
   xdg.configFile."gdb/gdbinit".text = ''
     set debuginfod enabled off
     '';
+  xdg.configFile."user-dirs.dirs".text = ''
+  XDG_DOWNLOAD_DIR="$HOME/Downloads"
+  '';
+
+  home.file.".background-image".source = ./bliss.jpg;
 
   programs.git = {
     enable = true;
