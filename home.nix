@@ -18,6 +18,7 @@
     	pycryptodome
     	(pwntools.override { debugger = mydebugger; })
     	ipython
+    	pytest
     	tqdm
     	angr
     	matplotlib
@@ -40,7 +41,7 @@
       (callPackage ./observer/observer.nix {})
       (callPackage ./angr-management/angr.nix {})
 
-      (builtins.getFlake "github:uiua-lang/uiua/5c4e9f051469d7707816871c342890459c70467d").packages.x86_64-linux.default
+      (builtins.getFlake "github:uiua-lang/uiua/48a12a0a4c3618b858f10d49533a6be9c94b1eb7").packages.x86_64-linux.default
       openvpn
       exiftool
       p7zip
@@ -80,9 +81,11 @@
       xorg.xbacklight
       typst
       qutebrowser
+      sent
       socat
       firefox
       jq
+      ghc
       prismlauncher
       (pkgs.writeShellScriptBin "nbc" ''sed -e '$a\' | bc '')
     ] ++ school;

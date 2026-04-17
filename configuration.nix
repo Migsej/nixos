@@ -193,6 +193,7 @@ mount_max = 1000
     authentication = pkgs.lib.mkOverride 10 ''
       #type database  DBuser  auth-method
       local all       all     trust
+      host  all      all     127.0.0.1/32   trust
     '';
   };
   # Some programs need SUID wrappers, can be configured further or are
