@@ -67,6 +67,7 @@ pkgs.buildFHSEnv {
       dotnet-runtime
       libpng12
       SDL2
+      python313Packages.ropper
       geos
       fuse
 
