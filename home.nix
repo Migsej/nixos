@@ -108,7 +108,8 @@
   XDG_DOWNLOAD_DIR="$HOME/Downloads"
   '';
 
-  home.file.".background-image".source = ./bliss.jpg;
+  # home.file.".background-image".source = ./bliss.jpg;
+  home.file.".background-image".source = ./paper.png;
 
   programs.git = {
     enable = true;

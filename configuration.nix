@@ -80,6 +80,15 @@ in
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.windowManager.i3.enable = true;
   services.xserver.windowManager.i3.configFile = ./dotfiles/i3/config;
+
+  services.xserver.windowManager.xmonad.config = builtins.readFile ./dotfiles/xmonad/xmonad.hs;
+  services.xserver.windowManager.xmonad.enable = true;
+  services.xserver.windowManager.xmonad.enableContribAndExtras = true;
+#   services.xserver.windowManager.xmonad.ghcArgs = [
+#       "-hidir /tmp"
+#       "-odir /tmp"
+#     ];
+
   services.xserver.windowManager.i3.extraPackages = with pkgs; [
       dmenu
       i3status
@@ -136,7 +145,9 @@ in
     description = "Migsej";
     extraGroups = [ "docker" "networkmanager" "wheel" ];
   };
-  
+
+
+  # networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
 
   # Allow unfree packages
   # nixpkgs.config.allowUnfree = true;
@@ -152,7 +163,7 @@ mount_max = 1000
     man-pages-posix
     nautilus
     unstablePkgs.proton-pass
-    protonvpn-gui
+    unstablePkgs.protonvpn-gui
     unstablePkgs.ghidra
     unstablePkgs.discord
     keyutils
