@@ -62,7 +62,7 @@ bindsym $mod+Return exec st
 
 bindsym --release $mod+Shift+s exec slock
 
-bindsym $mod+Shift+t exec flameshot gui
+bindsym $mod+Shift+t exec flameshot screen
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -75,8 +75,7 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
  
-bindsym $mod+p move workspace to output right
-bindsym $mod+o move workspace to output left
+bindsym $mod+p move workspace to output next
 
 
 # change focus

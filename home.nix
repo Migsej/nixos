@@ -19,8 +19,11 @@
     	(pwntools.override { debugger = mydebugger; })
     	ipython
     	pytest
+    	scipy
     	tqdm
     	angr
+    	# angr.optional-dependencies.unicorn
+    	# unicorn-angr
     	matplotlib
     	pgpy
     	gmpy2
@@ -45,6 +48,7 @@
       openvpn
       exiftool
       p7zip
+      pinta
       file
       debootstrap
       nmap
@@ -63,6 +67,7 @@
       pythonEnv
       mpv
       sxiv
+      sshfs
       binwalk
     	(sage.override {
       	extraPythonPackages = (ps: [ps.pycryptodome ps.tqdm ps.pwntools ] );
@@ -88,6 +93,7 @@
       ghc
       prismlauncher
       (pkgs.writeShellScriptBin "nbc" ''sed -e '$a\' | bc '')
+      (pkgs.writeShellScriptBin "sortlength" ''awk '{ print length, $0 }' | sort -n -s | cut -d" " -f2-'')
     ] ++ school;
   programs.bash = {
     enable = true;

@@ -19,7 +19,7 @@ in
 
 
   hardware.graphics.enable = true;
-  # hardware.graphics.extraPackages = [ pkgs.intel-ocl pkgs.intel-compute-runtime ];
+  hardware.graphics.extraPackages = [ pkgs.intel-ocl pkgs.intel-compute-runtime ];
 
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
@@ -163,9 +163,11 @@ mount_max = 1000
     man-pages-posix
     nautilus
     unstablePkgs.proton-pass
+    unstablePkgs.codex
     unstablePkgs.protonvpn-gui
     unstablePkgs.ghidra
     unstablePkgs.discord
+    unstablePkgs.llama-cpp
     keyutils
     xorg.xbacklight
   ];

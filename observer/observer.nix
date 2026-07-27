@@ -59,7 +59,7 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     mkdir -p $out
-    dpkg -x $src/Observer-1.0.220.deb $out
+    dpkg -x $src/Observer-1.0.250.deb $out
     cp -av $out/usr/* $out
     cp -av $out/opt/Observer $out/bin
     rm -rf $out/usr $out/opt
